@@ -84,6 +84,9 @@ build() {
       "${_pkg}"
   go \
     mod \
+      tidy
+  go \
+    mod \
       vendor
   go \
     build \
