@@ -80,7 +80,8 @@ build() {
     "${_tarname}"
   go \
     mod \
-      init
+      init \
+      "${_pkg}"
   go \
     mod \
       vendor
