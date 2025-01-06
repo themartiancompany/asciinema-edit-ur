@@ -10,8 +10,8 @@ _os="$( \
 _git="false"
 _pkg=asciinema-edit
 pkgname="${_pkg}"
-pkgver=0.0.7.3
-_commit="946ef32cd0cf8ffa39215c8c18c20793338b4102"
+pkgver=0.0.7.4
+_commit="498a776768222aa5fb534fab9721a69a2def590a"
 pkgrel=1
 pkgdesc="asciinema casts post-production tools."
 _http="https://github.com"
@@ -49,7 +49,7 @@ if [[ "${_git}" == "true" ]]; then
   _sum="SKIP"
 elif [[ "${_git}" == "false" ]]; then
   _src="${_tarname}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz"
-  _sum='ddf78ba6e2be27e5674364907a99f9dfa2b2519eeea53df340bf8a2fa73acb44e8fe849edc5280fd3d3c74f00b11488cf5c5de9d5c0fbd214b0e003a4e05f66f'
+  _sum='421c9dd1f751d592946047956c9f3ebe2fe656439152a0a8c5eecc2b11ace4f1a76fa64dc90431c6c0a0251ec3a11a9cd57e4305d17d4f078974439189001486'
 fi
 source=(
   "${_src}"
