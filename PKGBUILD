@@ -31,11 +31,13 @@ license=(
   'AGPL3'
 )
 _tarname="${_pkg}-${pkgver}"
+_tag_name="commit"
+_tag="${_commit}"
 if [[ "${_git}" == "true" ]]; then
   makedepends+=(
     "git"
   )
-  _src="${_tarname}::git+${url}#${_commit}"
+  _src="${_tarname}::git+${url}#${_tag_name}=${_tag}"
   _sum="SKIP"
 elif [[ "${_git}" == "false" ]]; then
   _src="${_tarname}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz"
