@@ -39,7 +39,7 @@ if [[ "${_git}" == "true" ]]; then
   _sum="SKIP"
 elif [[ "${_git}" == "false" ]]; then
   _src="${_tarname}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz"
-  _sum='2c8af30b216bc168521bcc899c5e677ae40344e8a2b4ee19b8702f9517c50c1c787527bb4ea6157da8f43e053a56e3cd9d466f08e7e741a1f76247122cc4d654'
+  _sum='106c8c4ac320a093cca59703e524817b12d206a6cc9e4d187c9d122a069855fc33c1410fe7119372373be5c614ab3bca9283d73f47b21da91cdffeff3a6d5fa2'
 fi
 source=(
   "${_src}"
