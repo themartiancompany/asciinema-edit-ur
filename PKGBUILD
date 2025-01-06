@@ -52,6 +52,7 @@ sha512sums=(
 )
 
 prepare() {
+  true
   # cp \
   #   -r \
   #   "${_tarname}/vendor" \
