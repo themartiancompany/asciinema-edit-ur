@@ -4,6 +4,9 @@
 # Maintainer: Pellegrino Prevete (tallero) <pellegrinoprevete@gmail.com>
 # Maintainer: Malachi Soord <me@malachisoord.com>
 
+_os="$( \
+  uname \
+    -o)"
 _git="false"
 _pkg=asciinema-edit
 pkgname="${_pkg}"
@@ -24,8 +27,13 @@ arch=(
   'pentium4'
   'powerpc'
 )
+if [[ "${_os}" == "Android" ]]; then
+  _go="golang"
+elif [[ "${_os}" == "GNU/Linux" ]]; then
+  _go="go"
+fi
 makedepends=(
-  'go'
+  "${_go}"
 )
 license=(
   'AGPL3'
