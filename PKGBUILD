@@ -7,7 +7,8 @@
 _git="false"
 _pkg=asciinema-edit
 pkgname="${_pkg}"
-pkgver=0.0.6.1
+# pkgver=0.0.6.1
+pkgver=0.0.6
 _commit="28a7d761cd7cb112f23e43e2f2f948542cc0fc9f"
 pkgrel=1
 pkgdesc="asciinema casts post-production tools."
@@ -51,10 +52,10 @@ sha512sums=(
 )
 
 prepare() {
-  cp \
-    -r \
-    "${_tarname}/vendor" \
-    "${srcdir}"
+  # cp \
+  #   -r \
+  #   "${_tarname}/vendor" \
+  #   "${srcdir}"
 }
 
 build() {
@@ -75,6 +76,12 @@ build() {
   export GOFLAGS="-buildmode=pie -trimpath -ldflags=-linkmode=external -mod=readonly -modcacherw"
   cd \
     "${_tarname}"
+  go \
+    mod \
+      init
+  go \
+    mod \
+      vendor
   go \
     build \
       -o build \
